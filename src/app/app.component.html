@@ -1,6 +1,6 @@
 <h1>
   <!-- Cuando utilizamos {{ }} estamos sincronizando la vista desde el modelo -->
-  {{title}}
+  {{_title}}
 </h1>
 
 <!--
@@ -12,6 +12,6 @@
    previamente a su asignación como valor de un atributo, marcamos dicho atributo entre corchetes.
  -->
 <lista-contactos 
-  [contactos]="['Tim Cook', 'Elon Musk', 'Bill Gates']"
+  [contactos]="_listaContactos"
   (contactoSeleccionado)="mostrarContactoSeleccionado($event)">
 </lista-contactos>

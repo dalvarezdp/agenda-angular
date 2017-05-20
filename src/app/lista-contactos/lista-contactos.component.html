@@ -4,12 +4,12 @@
      el elemento HTML sobre el que se usa la directiva (y toda la jerarquía descendente), y se asigna
      el item en cuestión en la variable dada (let item of colection).
    -->
-  <li *ngFor="let contacto of contactos">
+  <li *ngFor="let contacto of contactos"> 
     <!--
        Por cada contacto, pintamos un elemento <span> con su nombre. Además, nos suscribimos al
        evento click de cada elemento <span> para habilitar la notificación de contacto seleccionado
        al componente padre.
      -->
-    <span (click)="notificarContactoSeleccionado(contacto)">{{ contacto }}</span>
+    <span (click)="notificarContactoSeleccionado(contacto)">{{ contacto }} </span>
   </li>
 </ul>

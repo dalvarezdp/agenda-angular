@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactoService } from './contacto.service'
 
 @Component({
   // selector css del elemento donde se instanciará el componente.
@@ -11,11 +12,19 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   
-  private title: String;
+  private _title: string;
+  private _listaContactos: string[];
+
+  /* para hacer una inyeccion de dependencias, devemos indicar en el contructor 
+  de una clase un parametro tipado precisamente con el servicio que queremos usar
+  y añadir siempre el modificador de acceso
+  */
+  constructor(private _contactoService: ContactoService){}
 
   // Este metodo es de obligatoria implementacion cuando usamos la interfaz OnINit. Puesto que no retorna nada, podemos anotarlo como 'void'. Este metodo se ejecuta al instanciarse la clase 'AppComponent'
   ngOnInit(): void {
-    this.title = 'Vamos a desarrollar la agenda';
+    this._title = 'Super Agenda';
+    this._listaContactos = this._contactoService.obtenerContactos();
   }
 
   mostrarContactoSeleccionado(contacto: string): void {
