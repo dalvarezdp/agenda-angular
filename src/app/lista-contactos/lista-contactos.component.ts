@@ -25,7 +25,7 @@ export class ListaContactosComponent implements OnInit {
   }
 
   // Este manejador se encarga de notificar al componente padre el contacto indicado.
-  notificarContactoSeleccionado(contacto: string): void{
+  notificarEliminacionContacto(contacto: string): void{
     // Para notificar, basta con ejecutar la función 'emit' del atributo 'EventEmitter'.
     this.contactoSeleccionado.emit(contacto)
   }

@@ -28,7 +28,9 @@ export class AppComponent implements OnInit {
   }
 
   mostrarContactoSeleccionado(contacto: string): void {
-    alert(contacto);
+    //alert(contacto);
+    this._contactoService.eliminarContacto(contacto);
+    this._listaContactos = this._contactoService.obtenerContactos();
   }
 
 }

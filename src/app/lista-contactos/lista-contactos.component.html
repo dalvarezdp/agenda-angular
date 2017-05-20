@@ -6,10 +6,13 @@
    -->
   <li *ngFor="let contacto of contactos"> 
     <!--
-       Por cada contacto, pintamos un elemento <span> con su nombre. Además, nos suscribimos al
-       evento click de cada elemento <span> para habilitar la notificación de contacto seleccionado
-       al componente padre.
+       Por cada contacto, pintamos un elemento <span> con su nombre. 
      -->
-    <span (click)="notificarContactoSeleccionado(contacto)">{{ contacto }} </span>
+    <span>{{ contacto }} </span>
+    <!--
+      Además, nos suscribimos al evento click de cada elemento <button> para habilitar la notificación de 'eliminar contacto'
+       al componente padre.
+    -->  
+    <button (click)="notificarEliminacionContacto(contacto)">Eliminar</button>
   </li>
 </ul>
