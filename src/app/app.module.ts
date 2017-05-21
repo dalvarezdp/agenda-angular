@@ -5,12 +5,14 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ListaContactosComponent } from './lista-contactos/lista-contactos.component';
-import { ContactoService } from './contacto.service'
+import { ContactoService } from './contacto.service';
+import { FormularioAltaComponent } from './formulario-alta/formulario-alta.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaContactosComponent
+    ListaContactosComponent,
+    FormularioAltaComponent
   ],
   imports: [
     BrowserModule,

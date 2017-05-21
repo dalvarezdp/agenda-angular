@@ -2,6 +2,10 @@
   <!-- Cuando utilizamos {{ }} estamos sincronizando la vista desde el modelo -->
   {{_title}}
 </h1>
+<!--
+   Formulario de alta de usuario
+ -->
+ <formulario-alta (alCrearContacto)="darAltaContacto($event)"></formulario-alta>
 
 <!--
    Para instanciar un componente indicamos una etiqueta HTML que responda al selector definido

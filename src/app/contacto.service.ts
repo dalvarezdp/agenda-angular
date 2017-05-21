@@ -25,4 +25,8 @@ export class ContactoService {
       return c.nombre !== contacto.nombre;
     });
   }
+
+  crearContacto(contacto: Contacto): void {
+    this._contactos.push(new Contacto(contacto.nombre));
+  }
 }

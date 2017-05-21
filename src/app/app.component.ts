@@ -39,4 +39,13 @@ export class AppComponent implements OnInit {
     }
   }
 
+  /**
+   * Se encarga de crear nuevos contactos en la app
+   * @param contacto 
+   */
+  darAltaContacto(contacto: Contacto): void {
+    this._contactoService.crearContacto(contacto);
+    this._listaContactos = this._contactoService.obtenerContactos();
+  }  
+
 }
