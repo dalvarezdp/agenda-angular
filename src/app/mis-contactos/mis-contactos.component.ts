@@ -19,7 +19,11 @@ export class MisContactosComponent implements OnInit {
 
   // Este metodo es de obligatoria implementacion cuando usamos la interfaz OnINit. Puesto que no retorna nada, podemos anotarlo como 'void'. Este metodo se ejecuta al instanciarse la clase 'AppComponent'
   ngOnInit() {
-    this._listaContactos = this._contactoService.obtenerContactos();
+    this._contactoService
+        .obtenerContactos()
+        .subscribe((contactos: Contacto[]) => {
+          this._listaContactos = contactos;
+    });
   }
 
   /**
@@ -29,7 +33,7 @@ export class MisContactosComponent implements OnInit {
   avisarEliminacionContacto(contacto: Contacto): void {
     if (confirm(`¿Estás seguro de querer eliminar a ${contacto.nombre}?`)){
       this._contactoService.eliminarContacto(contacto);
-      this._listaContactos = this._contactoService.obtenerContactos();
+      //this._listaContactos = this._contactoService.obtenerContactos();
     }
   }
 

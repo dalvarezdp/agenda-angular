@@ -1,0 +1,12 @@
+{
+  "contactos": [
+    {
+      "nombre": "Tim Cook",
+      "email": "Tim@apple.com",
+      "movil": "666333444",
+      "facebook": "Tim.Cook",
+      "twitter": "Tim.Cook",
+      "id": 1
+    }
+  ]
+}

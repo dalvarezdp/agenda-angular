@@ -28,11 +28,13 @@ export class NuevoContactoComponent implements OnInit {
    * @param contacto 
    */
   darAltaContacto(contacto: Contacto): void {
-    this._contactoService.crearContacto(contacto);
-    alert("El contacto se ha creado correctamente.");
-
-    // Podemos navegar desde un componente a traves del Router
-    this._router.navigate(['/mis-contactos']);
+    this._contactoService
+        .crearContacto(contacto)
+        .subscribe((nuevoContacto: Contacto) => {
+            alert(`El contacto ${nuevoContacto.nombre}  se ha creado correctamente.`);
+            // Podemos navegar desde un componente a traves del Router
+            this._router.navigate(['/mis-contactos']);
+        });
   } 
 
 }
