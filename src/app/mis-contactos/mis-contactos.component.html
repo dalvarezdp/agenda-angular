@@ -1,0 +1,14 @@
+<h2>Mis Contactos</h2>
+
+<!--
+   Para instanciar un componente indicamos una etiqueta HTML que responda al selector definido
+   en ese componente. Para enlazar datos en dicho componente (Padre > Hijo), los pasamos en los
+   atributos decorados con 'Input'. Para suscribirnos a eventos de dicho componente (Hijo > Padre),
+   marcamos el atributo decorado con 'Output' entre paréntesis y asignamos un manejador; los
+   argumentos del evento vienen dados en '$event'. Por último, si queremos evaluar una expresión
+   previamente a su asignación como valor de un atributo, marcamos dicho atributo entre corchetes.
+ -->
+<lista-contactos 
+  [contactos]="_listaContactos"
+  (alEliminarContacto)="avisarEliminacionContacto($event)">
+</lista-contactos>

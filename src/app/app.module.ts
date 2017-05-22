@@ -7,17 +7,23 @@ import { AppComponent } from './app.component';
 import { ListaContactosComponent } from './lista-contactos/lista-contactos.component';
 import { ContactoService } from './contacto.service';
 import { FormularioAltaComponent } from './formulario-alta/formulario-alta.component'
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { MisContactosComponent } from './mis-contactos/mis-contactos.component';
+import { NuevoContactoComponent } from './nuevo-contacto/nuevo-contacto.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaContactosComponent,
-    FormularioAltaComponent
+    FormularioAltaComponent,
+    MisContactosComponent,
+    NuevoContactoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [
     ContactoService
