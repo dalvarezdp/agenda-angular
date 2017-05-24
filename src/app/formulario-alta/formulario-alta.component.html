@@ -6,48 +6,72 @@
 <form ngForm #contacto="ngForm" (ngSubmit)="notificarCreacionContacto(contacto)">
 
   <!-- Nombre del contacto -->
-  <div>
-    <label for="nombre">Nombre</label>
-    <!--
-      La directiva 'NgModel' instancia la clase 'FormControl' correspondiente al elemento de formulario.
-      Con '#nombre' creamos Template Reference Variables. Si asignamos como valor la directiva 'NgModel', obtenemos una referencia a la instancia 'FormControl' creada.
-    -->
-    <input
-      type="text"
-      ngModel
-      id="nombre"
-      name="nombre"
-      #nombre="ngModel"
-      minlength="3"
-      required>
-    <div *ngIf="nombre.touched && nombre.invalid" class="mensaje-error">
-      El nombre es un campo obligatorio.
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <label for="nombre">Nombre</label>
+      <!--
+        La directiva 'NgModel' instancia la clase 'FormControl' correspondiente al elemento de formulario.
+        Con '#nombre' creamos Template Reference Variables. Si asignamos como valor la directiva 'NgModel', obtenemos una referencia a la instancia 'FormControl' creada.
+      -->
+      <input
+        type="text"
+        class="u-full-width"
+        ngModel
+        id="nombre"
+        name="nombre"
+        #nombre="ngModel"
+        minlength="3"
+        required>
+      <div *ngIf="nombre.touched && nombre.invalid" class="mensaje-error">
+        El nombre es un campo obligatorio.
+      </div>
     </div>
+    
   </div>
 
-  <!-- Correo electrónico del contacto -->
-  <div>
-    <label for="email">Correo electrónico</label>
-    <input type="text" ngModel id="email" name="email">
-  </div>
+<div class="row">
+    <div class="offset-by-three six columns">
+      <!-- Correo electrónico del contacto -->
+      <div>
+        <label for="email">Correo electrónico</label>
+        <input class="u-full-width" type="text" ngModel id="email" name="email">
+      </div>
+    </div>
+</div>      
 
-  <!-- Móvil del contacto -->
-  <div>
-    <label for="movil">Móvil</label>
-    <input type="text" ngModel id="movil" name="movil">
-  </div>
+<div class="row">
+    <div class="offset-by-three six columns">
+      <!-- Móvil del contacto -->
+      <div>
+        <label for="movil">Móvil</label>
+        <input class="u-full-width" type="text" ngModel id="movil" name="movil">
+      </div>
+    </div>
+</div>
 
-  <!-- Cuenta de Facebook del contacto -->
-  <div>
-    <label for="facebook">Facebook</label>
-    <input type="text" ngModel id="facebook" name="facebook">
-  </div>
+<div class="row">
+    <div class="offset-by-three six columns">
+      <!-- Cuenta de Facebook del contacto -->
+      <div>
+        <label for="facebook">Facebook</label>
+        <input class="u-full-width" type="text" ngModel id="facebook" name="facebook">
+      </div>
+    </div>
+</div>      
 
-  <!-- Cuenta de Twitter del contacto -->
-  <div>
-    <label for="twitter">Twitter</label>
-    <input type="text" ngModel id="twitter" name="twitter">
-  </div>
+<div class="row">
+    <div class="offset-by-three six columns">
+      <!-- Cuenta de Twitter del contacto -->
+      <div>
+        <label for="twitter">Twitter</label>
+        <input class="u-full-width" type="text" ngModel id="twitter" name="twitter">
+      </div>
+    </div>
+</div>    
 
-  <button type="submit" [disabled]="contacto.invalid">Guardar</button>
+<div class="row">
+    <div class="offset-by-three six columns">
+      <button class="u-full-width button-primary" type="submit" [disabled]="contacto.invalid">Guardar</button>
+    </div>
+</div>    
 </form>

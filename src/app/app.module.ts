@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { MisContactosComponent } from './mis-contactos/mis-contactos.component';
 import { NuevoContactoComponent } from './nuevo-contacto/nuevo-contacto.component'
 import { ApiUrlProvider } from './configuracion';
+import { DetallesContactoComponent } from './detalles-contacto/detalles-contacto.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ApiUrlProvider } from './configuracion';
     ListaContactosComponent,
     FormularioAltaComponent,
     MisContactosComponent,
-    NuevoContactoComponent
+    NuevoContactoComponent,
+    DetallesContactoComponent
   ],
   imports: [
     BrowserModule,

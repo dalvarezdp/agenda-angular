@@ -1,10 +1,10 @@
-<ul>
+<ul class="u-full-width">
   <!--
      Usamos la directiva NgFor para iterar por una colección de items. Por cada iteración se replica
      el elemento HTML sobre el que se usa la directiva (y toda la jerarquía descendente), y se asigna
      el item en cuestión en la variable dada (let item of colection).
    -->
-  <li *ngFor="let contacto of contactos"> 
+  <li *ngFor="let contacto of contactos" (click)="notificarSeleccionContacto(contacto)"> 
     <!--
        Por cada contacto, pintamos un elemento <span> con su nombre. 
      -->
@@ -13,6 +13,8 @@
       Además, nos suscribimos al evento click de cada elemento <button> para habilitar la notificación de 'eliminar contacto'
        al componente padre.
     -->  
+    <!--
     <button (click)="notificarEliminacionContacto(contacto)">Eliminar</button>
+    -->
   </li>
 </ul>

@@ -1,19 +1,27 @@
-<h1>
-  Super Angenda
-</h1>
+<div class="container">
+  
+  <!-- Título -->
+  <header>
+    <h1>Super Angenda</h1>
+  </header>
+  
 
-<!-- Barra de navegacion -->
-<nav>
-  <ul>
-    <li>
-      <!-- Para nagegar a una ruta definida desde un template, usamos la directiva RouterLink -->
-      <a routerLink="/mis-contactos">Mis Contactos</a>
-    </li>
-    <li>
-      <a routerLink="/nuevo-contacto">Nuevo Contacto</a>
-    </li>
-  </ul>
-</nav>
+  <!-- Barra de navegacion -->
+  <nav>
+    <ul>
+      <li>
+        <!-- Para nagegar a una ruta definida desde un template, usamos la directiva RouterLink -->
+        <a routerLink="/mis-contactos"
+          routerLinkActive="marcada">Mis Contactos</a>
+      </li>
+      <li>
+        <a routerLink="/nuevo-contacto"
+          routerLinkActive="marcada">Nuevo Contacto</a>
+      </li>
+    </ul>
+  </nav>
 
-<!-- Zona dinamica -->
-<router-outlet></router-outlet>
+  <!-- Zona dinamica -->
+  <router-outlet></router-outlet>
+</div>
+
