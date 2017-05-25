@@ -1,3 +1,8 @@
 <div class="u-full-width" *ngIf="contacto">
   <h5>{{ contacto.nombre }}</h5>
+  <hr>
+  <!-- movil y correo -->
+  <div>
+    {{ contacto | datosContacto:" ---- " }}
+  </div>
 </div>

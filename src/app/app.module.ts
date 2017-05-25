@@ -12,6 +12,8 @@ import { MisContactosComponent } from './mis-contactos/mis-contactos.component';
 import { NuevoContactoComponent } from './nuevo-contacto/nuevo-contacto.component'
 import { ApiUrlProvider } from './configuracion';
 import { DetallesContactoComponent } from './detalles-contacto/detalles-contacto.component';
+import { DatosContactoPipe } from './datos-contacto.pipe';
+import { OrdenacionContactosPipe } from './ordenacion-contactos.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { DetallesContactoComponent } from './detalles-contacto/detalles-contacto
     FormularioAltaComponent,
     MisContactosComponent,
     NuevoContactoComponent,
-    DetallesContactoComponent
+    DetallesContactoComponent,
+    DatosContactoPipe,
+    OrdenacionContactosPipe
   ],
   imports: [
     BrowserModule,
