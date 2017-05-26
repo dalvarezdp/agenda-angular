@@ -1,4 +1,6 @@
-<button (click)="invertirOrden()">Invertir orden</button>
+<button (click)="invertirOrden()">
+  <i class="fa"  [class.fa-sort-alpha-asc]="_ordenacionAscendente" [class.fa-sort-alpha-desc]="!_ordenacionAscendente" aria-hidden="true"></i>
+</button>
 <ul class="u-full-width">
   <!--
      Usamos la directiva NgFor para iterar por una colección de items. Por cada iteración se replica
