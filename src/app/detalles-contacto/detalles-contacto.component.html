@@ -1,8 +1,24 @@
 <div class="u-full-width" *ngIf="contacto">
   <h5>{{ contacto.nombre }}</h5>
   <hr>
+  <!-- Redes sociales -->
+  <div>
+    <button
+      type="button"
+      (click)="notificarFacebook()"
+      *ngIf="contacto.facebook">
+        <i class="fa fa-facebook-square fa-4x" aria-hidden="true"></i>
+    </button>
+    <button
+      type="button"
+      (click)="notificarTwitter()"
+      *ngIf="contacto.twitter">
+        <i class="fa fa-twitter-square fa-4x" aria-hidden="true"></i>
+    </button>
+  </div>
+  <hr>
   <!-- movil y correo -->
   <div>
-    {{ contacto | datosContacto:" ---- " }}
+    {{ contacto | datosContacto:' ---- ' }}
   </div>
 </div>

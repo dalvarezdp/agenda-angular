@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 import { Contacto } from '../contacto'
 
@@ -10,7 +10,22 @@ import { Contacto } from '../contacto'
 export class DetallesContactoComponent {
 
   @Input() contacto: Contacto;
+  @Output() alPulsarFacebook: EventEmitter<Contacto>;
+  @Output() alPulsarTwitter: EventEmitter<Contacto>;
 
-  constructor() { }
+  constructor() {
+    this.alPulsarFacebook = new EventEmitter<Contacto>();
+    this.alPulsarTwitter = new EventEmitter<Contacto>();
+  }
+
+  // Notificamos la pulsación sobre el botón 'Facebook'.
+  notificarFacebook(): void {
+    this.alPulsarFacebook.emit(this.contacto);
+  }
+
+  // Notificamos la pulsación sobre el botón 'Twitter'.
+  notificarTwitter(): void {
+    this.alPulsarTwitter.emit(this.contacto);
+  }
 
 }

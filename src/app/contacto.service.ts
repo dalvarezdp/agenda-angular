@@ -24,7 +24,14 @@ export class ContactoService {
                  * 'Observable<Contacto[]>' que es lo que realmente necesitamos.
                  */
                 .map((respuesta: Response) => {
-                  return respuesta.json() as Contacto[];
+                  // Recogemos la colección de objetos JSON de la respuesta y le
+                  // damos comportamiento de 'colección de cualquier cosa'.
+                  let contactosEnRespuesta: any[] = respuesta.json() as any[];
+                  // Iteramos por la colección de objetos JSON y vamos instanciando
+                  // objetos de tipo 'Contacto' por cada uno de ellos.
+                    return contactosEnRespuesta.map((datos: any) => {
+                      return Contacto.nuevoDesdeJson(datos);
+                    });
                 });  
   }
 
@@ -43,7 +50,7 @@ export class ContactoService {
     return this._http
                 .post(`${this.apiUrl}/contactos`, contacto)
                 .map((respuesta: Response) => {
-                  return respuesta.json() as Contacto;
+                  return Contacto.nuevoDesdeJson(respuesta.json());
                 });
   }
 }

@@ -47,4 +47,12 @@ export class MisContactosComponent implements OnInit {
     this._contactoSeleccionado = contacto;
   }
 
+  navegarFacebook(contacto: Contacto): void {
+    window.open(contacto.obtenerRutaFacebook(), '_blank');
+  }
+
+  navegarTwitter(contacto: Contacto): void {
+    window.open(contacto.obtenerRutaTwitter(), '_blank');
+  }
+
 }
